@@ -1,0 +1,6 @@
+app/**/*.proto
+common/**/*.proto
+proxy/**/*.proto
+transport/**/*.proto
+core/config.proto
+

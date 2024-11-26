@@ -1,0 +1,58 @@
+[package]
+name = "xray-core"
+authors = ["clovexx <clovexx.github@gmail.com>"]
+description = "Xray-core GRPC client"
+version = "0.1.1"
+edition = "2021"
+build = "build.rs"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/clovexx/xray-core"
+homepage = "https://xtls.github.io/"
+
+exclude = [
+    "/scripts/*",
+    "/.github"
+]
+
+categories = [
+    "api-bindings",
+    "network-programming"
+]
+
+[features]
+default = ["client", "connect"]
+
+client = []
+connect = ["tower", "tokio", "hyper-util"]
+
+[dependencies.tokio]
+version = "1.40.0"
+optional = true
+
+[dependencies.tower]
+version = "0.5.1"
+optional = true
+default-features = false
+features = ["util"]
+
+[dependencies.hyper-util]
+version = "0.1.9"
+optional = true
+default-features = false
+features = ["tokio"]
+
+[dependencies.tonic]
+version = "0.12.3"
+
+[dependencies.prost]
+version = "0.13.3"
+
+[dependencies.prost-types]
+version = "0.13.3"
+
+[build-dependencies.tonic-build]
+version = "0.12.3"
+
+[build-dependencies.prost-build]
+version = "0.13.3"
