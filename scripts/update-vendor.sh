@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # VERSION specified release that script will download to extract protobuf files.
-VERSION="v1.8.24"
+VERSION="v24.12.15"
 
 set -x
 

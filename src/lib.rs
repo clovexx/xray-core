@@ -113,6 +113,10 @@ pub mod core {
     pub mod observatory {
         tonic::include_proto!("xray.core.app.observatory");
 
+        pub mod burst {
+            tonic::include_proto!("xray.core.app.observatory.burst");
+        }
+
         #[cfg(feature = "client")]
         pub mod command {
             tonic::include_proto!("xray.core.app.observatory.command");
@@ -163,7 +167,7 @@ pub mod proxy {
     pub mod shadowsocks_2022 {
         tonic::include_proto!("xray.proxy.shadowsocks_2022");
     }
-
+    
     /// <https://xtls.github.io/en/config/inbounds/socks.html><br>
     /// <https://xtls.github.io/en/config/outbounds/socks.html>
     pub mod socks {
@@ -180,6 +184,10 @@ pub mod proxy {
     pub mod vless {
         tonic::include_proto!("xray.proxy.vless");
 
+        pub mod encoding {
+            tonic::include_proto!("xray.proxy.vless.encoding");
+        }
+        
         /// <https://xtls.github.io/en/config/inbounds/vless.html>
         pub mod inbound {
             tonic::include_proto!("xray.proxy.vless.inbound");
@@ -215,23 +223,12 @@ pub mod proxy {
 
 
 pub mod transport {
-    tonic::include_proto!("xray.transport");
-
     pub mod internet {
         tonic::include_proto!("xray.transport.internet");
-
-        pub mod domainsocket {
-            tonic::include_proto!("xray.transport.internet.domainsocket");
-        }
 
         /// <https://xtls.github.io/en/config/transports/grpc.html>
         pub mod grpc {
             tonic::include_proto!("xray.transport.internet.grpc.encoding");
-        }
-
-        /// <https://xtls.github.io/en/config/transports/h2.html>
-        pub mod http {
-            tonic::include_proto!("xray.transport.internet.http");
         }
 
         /// <https://xtls.github.io/en/config/transports/httpupgrade.html>
@@ -245,7 +242,7 @@ pub mod transport {
         }
 
         pub mod quic {
-            tonic::include_proto!("xray.transport.internet.quic");
+            // tonic::include_proto!("xray.transport.internet.quic");
         }
 
         pub mod reality {

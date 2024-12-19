@@ -54,8 +54,6 @@ const PROTO_FILES: &[&str] = &[
     "vendor/github.com/XTLS/Xray-core/proxy/wireguard/config.proto",
 
     // -- Transport --
-    "vendor/github.com/XTLS/Xray-core/transport/global/config.proto",
-    "vendor/github.com/XTLS/Xray-core/transport/internet/domainsocket/config.proto",
     "vendor/github.com/XTLS/Xray-core/transport/internet/grpc/encoding/stream.proto",
     "vendor/github.com/XTLS/Xray-core/transport/internet/grpc/config.proto",
     "vendor/github.com/XTLS/Xray-core/transport/internet/headers/dns/config.proto",
@@ -66,10 +64,8 @@ const PROTO_FILES: &[&str] = &[
     "vendor/github.com/XTLS/Xray-core/transport/internet/headers/utp/config.proto",
     "vendor/github.com/XTLS/Xray-core/transport/internet/headers/wechat/config.proto",
     "vendor/github.com/XTLS/Xray-core/transport/internet/headers/wireguard/config.proto",
-    "vendor/github.com/XTLS/Xray-core/transport/internet/http/config.proto",
     "vendor/github.com/XTLS/Xray-core/transport/internet/httpupgrade/config.proto",
     "vendor/github.com/XTLS/Xray-core/transport/internet/kcp/config.proto",
-    "vendor/github.com/XTLS/Xray-core/transport/internet/quic/config.proto",
     "vendor/github.com/XTLS/Xray-core/transport/internet/reality/config.proto",
     "vendor/github.com/XTLS/Xray-core/transport/internet/splithttp/config.proto",
     "vendor/github.com/XTLS/Xray-core/transport/internet/tcp/config.proto",
