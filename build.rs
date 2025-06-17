@@ -78,6 +78,10 @@ const PROTO_FILES: &[&str] = &[
 pub fn main() {
     let mut config = prost_build::Config::new();
     config.enable_type_names();
+    if cfg!(feature = "serde") {
+        config.type_attribute(".", "#[derive(serde::Serialize, serde::Deserialize)]");
+        config.type_attribute(".", "#[serde(rename_all = \"camelCase\")]");
+    }
 
     tonic_build::configure()
         .build_server(false)
